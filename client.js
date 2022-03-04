@@ -24,6 +24,12 @@ function addEmployee(){
     let annualSalary = $('#annualSalaryInput').val();
 
     console.log(`${firstName} ${lastName} ${idNumber} ${jobTitle} ${annualSalary}`);
+    $('#employeeList').append(`
+    <tr class="${idNumber}>
+    <td>${firstName}</td>
+    <td>${lastName}</td>
+    <td>${idNumber}</td>`)
+    ;
     
     
 }
