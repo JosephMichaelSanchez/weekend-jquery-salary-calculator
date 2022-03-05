@@ -25,6 +25,8 @@ function addEmployee(){
     $('#monthlySalary').empty();
     $('#monthlySalary').append(totalMonthly);
 
+    monthlyWarning();
+
     console.log(`${firstName} ${lastName} ${idNumber} ${jobTitle} ${annualSalary}`);
     $('#employeeList').append(`
     <tr>
@@ -44,6 +46,15 @@ function addEmployee(){
 function deleteRow(){
     $(this).closest("tr").remove();
     
+}
+
+function monthlyWarning(){
+if(totalMonthly > 20000){
+    console.log('hello');
+    $('#monthlySalary').toggleClass('warning');
+    
+}
+
 }
 
 
