@@ -24,6 +24,10 @@ function addEmployee(){
     let jobTitle = $('#titleInput').val();
     let annualSalary = $('#annualSalaryInput').val();
 
+    totalMonthly += Number(annualSalary);
+    $('#monthlySalary').empty();
+    $('#monthlySalary').append(totalMonthly);
+
     console.log(`${firstName} ${lastName} ${idNumber} ${jobTitle} ${annualSalary}`);
     $('#employeeList').append(`
     <tr class="${idNumber}">
@@ -33,8 +37,7 @@ function addEmployee(){
         <td>${jobTitle}</td>
         <td>${annualSalary}</td>
         <td><button class="deleteBtn ${idNumber}">DELETE</button></td>
-    </tr>`)
-    ;
+    </tr>`);
     
     
 }
