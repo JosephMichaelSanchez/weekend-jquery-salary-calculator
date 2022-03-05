@@ -9,10 +9,7 @@ function readyNow(){
 
     $('#submitButton').on('click', addEmployee);
 
-
-
-
-
+    $('#employeeList').on('click', '.deleteBtn', deleteRow);
 
 }
 
@@ -24,21 +21,30 @@ function addEmployee(){
     let jobTitle = $('#titleInput').val();
     let annualSalary = $('#annualSalaryInput').val();
 
-    totalMonthly += Number(annualSalary);
+    totalMonthly += Math.floor(Number(annualSalary)/12);
     $('#monthlySalary').empty();
     $('#monthlySalary').append(totalMonthly);
 
     console.log(`${firstName} ${lastName} ${idNumber} ${jobTitle} ${annualSalary}`);
     $('#employeeList').append(`
-    <tr class="${idNumber}">
+    <tr>
         <td>${firstName}</td>
         <td>${lastName}</td>
         <td>${idNumber}</td>
         <td>${jobTitle}</td>
         <td>${annualSalary}</td>
-        <td><button class="deleteBtn ${idNumber}">DELETE</button></td>
+        <td><button class="deleteBtn">DELETE</button></td>
     </tr>`);
     
     
 }
+
+
+
+function deleteRow(){
+    $(this).closest("tr").remove();
+    
+}
+
+
 
