@@ -4,6 +4,7 @@ $(readyNow);
 
 let totalMonthly = 0;
 
+
 function readyNow(){
 
     $('#submitButton').on('click', addEmployee);
@@ -25,10 +26,14 @@ function addEmployee(){
 
     console.log(`${firstName} ${lastName} ${idNumber} ${jobTitle} ${annualSalary}`);
     $('#employeeList').append(`
-    <tr class="${idNumber}>
-    <td>${firstName}</td>
-    <td>${lastName}</td>
-    <td>${idNumber}</td>`)
+    <tr class="${idNumber}">
+        <td>${firstName}</td>
+        <td>${lastName}</td>
+        <td>${idNumber}</td>
+        <td>${jobTitle}</td>
+        <td>${annualSalary}</td>
+        <td><button class="deleteBtn ${idNumber}">DELETE</button></td>
+    </tr>`)
     ;
     
     
