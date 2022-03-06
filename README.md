@@ -1,5 +1,22 @@
-Salary Calculator
+# **Salary Calculator**
 
-Your project description goes here. What problem did you solve? How did you solve it?
+## **Description**
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+### Weekend Challenge
+
+The Salary Calculator is a tool that calculates the monthly payroll expenses of a business. Users submit 
+five (5) pieces of employee data into input fields: 
+-*First Name*
+-*Last Name*
+-*Employee ID Number*
+-*Job Title*
+-*Annual Salary* 
+
+The calculator then displays this info in a table, and stores the employee's info into an array. As 
+employees are added, the tool calculates the monthly payroll by dividing the sum of all of the annual 
+salaries by 12. If the total monthly payroll exceeds $20,000, the tool warns the user by highlighting the 
+monthly payroll in red. 
+
+
+
+
