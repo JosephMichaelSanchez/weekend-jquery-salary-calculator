@@ -37,6 +37,8 @@ function addEmployee(){
         <td>${annualSalary}</td>
         <td><button class="deleteBtn">DELETE</button></td>
     </tr>`);
+
+    $('input').val('');
     
     
 }
