@@ -32,7 +32,7 @@ function addEmployee(){
     // push the employee object into the payrollInfo array
     payrollInfo.push(employee);
     // update the totalMonthly variable by adding the added employee's annual salary, and dividing the variable by 12
-    totalMonthly += Math.floor(Number(annualSalary)/12);
+    totalMonthly += Math.ceil(Number(annualSalary)/12);
     // append totalMonthly to the DOM
     $('#monthlySalary').empty();
     $('#monthlySalary').append(totalMonthly);
@@ -40,7 +40,7 @@ function addEmployee(){
     monthlyWarning();
     // logging the name of the added employee to the console 
     console.log(`Adding ${firstName} ${lastName} to payroll.`);
-    // appending the information from thew 5 input boxes to the DOM
+    // appending the information from the 5 input boxes to the DOM
     $('#employeeList').append(`
     <tr>
         <td>${firstName}</td>
@@ -68,10 +68,10 @@ function monthlyWarning(){
     //conditional that checks if the totalMonthly variable is above $20000
     if(totalMonthly > 20000){
         // if the if statement is true, the function targets the span displaying the monthly salary
-        // and toggles it's class to "warning", which gives it a red background
+        // and toggles it's class to 'warning', giving it a red background
         $('#monthlySalary').toggleClass('warning');
     
-    }
+}
 
 }
 
