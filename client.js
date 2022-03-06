@@ -3,7 +3,7 @@ console.log('JS Loaded!');
 $(readyNow);
 
 let totalMonthly = 0;
-
+let payrollInfo = [];
 
 function readyNow(){
 
@@ -21,13 +21,23 @@ function addEmployee(){
     let jobTitle = $('#titleInput').val();
     let annualSalary = $('#annualSalaryInput').val();
 
+    const employee = {
+        firstName: firstName, 
+        lastName: lastName,
+        id: idNumber,
+        title: jobTitle,
+        salary: annualSalary 
+    }
+
+    payrollInfo.push(employee);
+
     totalMonthly += Math.floor(Number(annualSalary)/12);
     $('#monthlySalary').empty();
     $('#monthlySalary').append(totalMonthly);
 
     monthlyWarning();
 
-    console.log(`${firstName} ${lastName} ${idNumber} ${jobTitle} ${annualSalary}`);
+    console.log(`Adding ${firstName} ${lastName} to payroll.`);
     $('#employeeList').append(`
     <tr>
         <td>${firstName}</td>
