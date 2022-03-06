@@ -21,3 +21,5 @@ button on the row with their information.
 
 
 ![screenshot 1](https://i.postimg.cc/TYDsH030/Screen-Shot-2022-03-06-at-11-35-57-AM.png)
+
+![screenshot 2](https://i.postimg.cc/SK1FpsFf/Screen-Shot-2022-03-06-at-11-42-07-AM.png)
