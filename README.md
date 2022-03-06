@@ -12,10 +12,11 @@ five (5) pieces of employee data into input fields:
 - *Job Title*
 - *Annual Salary* 
 
-The calculator then displays this info in a table, and stores the employee's info into an array. As 
+The calculator then displays this info in a table, and stores the employee's info in an array. As 
 employees are added, the tool calculates the monthly payroll by dividing the sum of all of the annual 
 salaries by 12. If the total monthly payroll exceeds $20,000, the tool warns the user by highlighting the 
-monthly payroll in red. 
+monthly payroll in red. Users can delete an employee from the table by using the corresponding "*DELETE*" 
+button on the row with their information. 
 
 
 
